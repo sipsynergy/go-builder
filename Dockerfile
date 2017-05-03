@@ -8,7 +8,7 @@ WORKDIR /go/src
 RUN go get github.com/tools/godep
 
 # Install glide
-RUN curl https://glide.sh/get | sh
+RUN go get github.com/Masterminds/glide
 
 # This is where your applications source code should be linked to via a volume.
 RUN mkdir -p /go/src/app
