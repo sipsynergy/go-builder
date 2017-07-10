@@ -3,7 +3,7 @@ FROM golang:alpine
 ARG SSH_KEY
 
 # Install git (required by godeps)
-RUN apk update && apk add --no-cache git curl openssh-client
+RUN apk update && apk add --no-cache git curl openssh-client gcc g++
 
 # Install godeps
 WORKDIR /go/src
