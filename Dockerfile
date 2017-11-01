@@ -14,8 +14,10 @@ RUN go get -v github.com/tools/godep
 RUN go get -v github.com/Masterminds/glide
 
 # Install ginkgo and friends
-RUN go get -v github.com/onsi/ginkgo
+RUN go get -v github.com/onsi/ginkgo/ginkgo
 RUN go get -v github.com/onsi/gomega
+
+RUN export "PATH=$PATH:$GOPATH/bin"
 
 # Make sure we have the host key
 RUN mkdir ~/.ssh
