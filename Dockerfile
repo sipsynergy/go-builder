@@ -13,6 +13,10 @@ RUN go get -v github.com/tools/godep
 # Install glide
 RUN go get -v github.com/Masterminds/glide
 
+# Install ginkgo and friends
+RUN go get -v github.com/onsi/ginkgo
+RUN go get -v github.com/onsi/gomega
+
 # Make sure we have the host key
 RUN mkdir ~/.ssh
 RUN ssh-keyscan rsa github.com > ~/.ssh/known_hosts
