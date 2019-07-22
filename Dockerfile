@@ -18,6 +18,7 @@ RUN go get -v github.com/onsi/ginkgo/ginkgo
 RUN go get -v github.com/onsi/gomega
 
 RUN export "PATH=$PATH:$GOPATH/bin"
+ENV GO111MODULE=on
 
 # Make sure we have the host key
 RUN mkdir ~/.ssh
